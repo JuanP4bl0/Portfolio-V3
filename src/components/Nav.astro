@@ -1,0 +1,75 @@
+<script>
+  const hamburgerIcon = document.querySelector(".hamburger-icon");
+  const menu = document.getElementById("Menu");
+  const nav = document.getElementById('Nav-mobile');
+
+  hamburgerIcon.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    document.body.classList.toggle("menu-open"); // Para evitar clicks fuera del menú
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      nav.style.backgroundColor = "#5E5D7A"
+    } else {
+      nav.style.backgroundColor = "transparent"
+    }
+  });
+</script>
+
+<nav
+  class="bg-black text-white justify-around max-w-2xl m-auto mt-4 p-2 rounded-full hidden lg:flex w-[100%]"
+>
+  <ul>
+    <a
+      href="#Proyects"
+      class="hover:text-TextCyan transition-colors duration-200">Projectos</a
+    >
+  </ul>
+  <ul>
+    <a
+      href="#About-me"
+      class="hover:text-TextCyan transition-colors duration-200">Sobre mi</a
+    >
+  </ul>
+  <ul>
+    <a
+      href="#Contact"
+      class="hover:text-TextCyan transition-colors duration-200">Contacto</a
+    >
+  </ul>
+</nav>
+
+<nav class="lg:hidden fixed w-[100%] -mt-20 pt-5 pb-5" id="Nav-mobile">
+  <div
+    class="flex justify-evenly items-center cursor-pointer hamburger-container"
+  >
+    <i class="fa-solid fa-bars text-2xl pr-4 hamburger-icon"></i>
+    <a href="/"
+      ><img
+        src="/IMGS/Logo.jpg"
+        alt="Perfil Photo"
+        class="w-10 rounded-full"
+      /></a
+    >
+    <h3>JuanP4bl0</h3>
+  </div>
+  <div class="text-center mt-4 bg-BTNBG hidden" id="Menu">
+    <ul class="py-4 m-0">
+      <a
+        href="#Proyects"
+        class="hover:text-TextCyan transition-colors text-white">Projectos</a
+      >
+    </ul>
+    <ul class="py-4 m-0">
+      <a href="#About-me" class="hover:text-TextCyan transition-colors text-white"
+        >Sobre mi</a
+      >
+    </ul>
+    <ul class="py-4 m-0">
+      <a href="#Contact" class="hover:text-TextCyan transition-colors text-white"
+        >Contacto</a
+      >
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,141 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import Card from "../components/Card.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<script>
+  const socialMedias = {
+    Gmail: "juanp4blog@gmail.com",
+    LinkedIn: "linkedin.com/JuanP4bl0",
+    Github: "github.com/JuanP4blo",
+  };
+</script>
+
+<Layout title="JuanP4bl0 Portfolio.">
+  <Container>
+    <section class="flex text-center align-middle items-center">
+      <img
+        src="/IMGS/Logo.jpg"
+        alt="Logo"
+        class="w-24 rounded-full object-cover object-center"
+      />
+      <h1 class="pl-4 text-xl font-Raleway font-bold">Hey, Soy Juan Pablo</h1>
+    </section>
+    <p class="text-md w-2xl py-2 text-balance">
+      Desarrollador frontend con experiencia en crear paginas web atractivas y
+      funcionales , que tiene como objetivo conectar con la audiencia de la
+      mejor forma y directa posible, Siempre en busca de nuevas oportunidades y
+      desafios en el mundo del diseño y desarrollo web.
+    </p>
+    <Card />
+    <section id="Proyects" class="flex gap-4 align-middle items-center">
+      <i
+        class="fa-solid fa-diagram-project text-xl mt-5 mb-5 font-bold uppercase"
+      ></i>
+      <h3 class="text-xl mt-5 mb-5 font-bold uppercase font-Raleway">
+        Projectos
+      </h3>
+    </section>
+    <div class="grid grid-cols-1 lg:grid lg:grid-cols-1">
+      <Projects
+        src="/IMGS/Projects/Dela.png"
+        alt="Preview of a first project"
+        title="Dela Flowers"
+        body="Es más que una simple página web, es un espacio donde la pasión por el crochet se transforma en arte en miniatura. Te invitamos a descubrir un universo tejido con amor, donde cada Amigurumi cobra vida con dedicación y cuidado"
+        code="https://github.com/JuanP4bl0/Dela-Flowers"
+        preview="https://dela-flowers.vercel.app/"
+      />
+      <Projects
+        src="/IMGS/Projects/Spooky.png"
+        alt="Preview of a second project"
+        title="Spooky Fest"
+        body="La plataforma que te guiará por un Halloween sin igual. Explora una amplia gama de eventos, desde fiestas temáticas hasta casas embrujadas, filtra por categoría y ubicación para encontrar experiencias a tu medida. Obtén toda la información: fechas, precios, requisitos y detalles para una planificación perfecta."
+        code="https://github.com/JuanP4bl0/Halloween-Festival"
+        preview="https://spookyfest.vercel.app/"
+      />
+      <Projects
+        src="/IMGS/Projects/Hexa.png"
+        alt="Preview of a third project"
+        title="Hexadecimal Color"
+        body=" la plataforma que te permite convertir tu visión en color. Elige un color de la forma más intuitiva: desliza tu dedo por la paleta interactiva, y te dara el codigo hexadecimal , ideal para diseñadores, artistas, desarrolladores web y amantes de los colores."
+        code="https://github.com/JuanP4bl0/Dela-Flowers"
+        preview="https://dela-flowers.vercel.app/"
+      />
+    </div>
+
+    <section id="About-me" class="flex gap-4 align-middle items-center">
+      <i class="fa-solid fa-address-card text-xl mt-5 mb-5 font-bold uppercase"
+      ></i>
+      <h3 class="text-xl mt-5 mb-5 font-bold uppercase font-Raleway">
+        Sobre mi
+      </h3>
+    </section>
+
+    <div class="flex flex-col-reverse">
+      <div class="p-2">
+        <p class="text-md pb-3 text-pretty w-full">
+          Me llamo Juan Pablo, y soy un joven desarrollador web de 18 años
+          apasionado por la tecnología. Desde pequeño me ha fascinado el mundo
+          digital, y con 16 años decidí dar el paso para convertir mi pasión en
+          mi carrera.
+        </p>
+        <p class="text-md pb-3 text-pretty w-full">
+          Actualmente, domino HTML, CSS, SASS y Javascript, y estoy ampliando
+          mis conocimientos con TailwindCSS y Python.
+        </p>
+        <p class="text-md pb-3 text-pretty w-full">
+          Mi objetivo es convertirme en un desarrollador completo capaz de crear
+          aplicaciones web intuitivas, atractivas y eficientes.
+        </p>
+        <p class="text-md pb-3 text-pretty w-full">
+          Soy una persona autodidacta, con gran capacidad de aprendizaje y una
+          fuerte ética de trabajo. Me apasiona seguir aprendiendo y mejorando
+          mis habilidades constantemente.
+        </p>
+      </div>
+      <img
+        src="/IMGS/Logo.jpg"
+        alt="Perfil photo"
+        class="m-auto p-2 rounded-full md:w-1/2"
+      />
+    </div>
+
+    <section id="Contact" class="flex gap-4 align-middle items-center">
+      <i class="fa-solid fa-address-book text-xl mt-5 mb-5 font-bold uppercase"
+      ></i>
+      <h3 class="text-xl mt-5 mb-5 font-bold uppercase font-Raleway">
+        Contactame
+      </h3>
+    </section>
+
+    <div class="grid grid-cols-2 w-1/2">
+      <div>
+        <ul class="mb-3">Email</ul>
+        <ul class="mb-3">Twitter/X</ul>
+        <ul class="mb-3">Github</ul>
+        <ul class="mb-3">LinkedIn</ul>
+      </div>
+
+      <div class="flex flex-col">
+        <a
+          class="hover:text-TextCyan transition-colors duration-200 mb-3"
+          href="mailto:juanp4blog@gmail.com">juanp4blog@gmail.com</a
+        >
+        <a
+          class="hover:text-TextCyan transition-colors duration-200 mb-3"
+          href="https://twitter.com/JuanP4bl0G">JuanSinFiltroo</a
+        >
+        <a
+          class="hover:text-TextCyan transition-colors duration-200 mb-3"
+          href="https://github.com/JuanP4bl0">@JuanP4blo</a
+        >
+        <a
+          class="hover:text-TextCyan transition-colors duration-200 mb-3"
+          href="https://www.linkedin.com/in/JuanP4bl0/">in/JuanP4bl0</a
+        >
+      </div>
+    </div>
+  </Container>
+</Layout>
