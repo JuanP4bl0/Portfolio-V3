@@ -1,25 +1,48 @@
-
 ---
-interface Props{
-  alt:string;
-  src:string;
-  title:string;
-  body:string;
-  code:string;
-  preview:string;
+interface Props {
+  alt: string;
+  src: string;
+  title: string;
+  body: string;
+  code: string;
+  preview: string;
 }
 
-const {alt,src,title,body,code,preview} = Astro.props
+const { alt, src, title, body, code, preview } = Astro.props;
 ---
+
 <article class="flex flex-col mb-10 2xl:w-auto p-5 lg:grid 2xl:grid-cols-2">
-  <img src={src} alt={alt} class="pr-3 object-cover object-center lg:object-fill pb-4 m-auto">
+  <img
+    src={src}
+    alt={alt}
+    class="pr-3 object-cover object-center lg:object-fill pb-4 m-auto"
+  />
   <div>
     <h3 class="text-TitleColor text-2xl md:text-lg pb-4">{title}</h3>
     <p class="md:text-md xl:text-md dark:text-white">{body}</p>
 
-  <div class="flex flex-col gap-4 pt-4 justify-center md:justify-start h-auto md:flex-row md:pt-auto">
-    <a href={code} target="_blank" class="bg-BTNBG text-white p-2 rounded-xl hover:bg-TextCyan transition-colors duration-200  text-center md:flex-grow"><button>Code</button></a>
-    <a href={preview} target="_blank"  class="bg-BTNBG text-white p-2 rounded-xl hover:bg-TextCyan transition-colors duration-200  text-center md:flex-grow"><button>Preview</button></a>
-  </div>
+    <div class="flex gap-3 p-2 justify-center md:justify-start m-3">
+      <slot />
+    </div>
+
+    <div
+      class="flex flex-col gap-4 pt-4 justify-center md:justify-start h-auto md:flex-row md:pt-auto"
+    >
+      <a
+        href={code}
+        target="_blank"
+        class="bg-BTNBG text-white p-2 rounded-xl hover:bg-TextCyan transition-colors duration-200 text-center md:flex-grow flex gap-3 items-center justify-center"
+        ><i class="fa-solid fa-code"></i> 
+        <button>Code</button></a
+      >
+      <a
+        href={preview}
+        target="_blank"
+        class="bg-BTNBG text-white p-2 rounded-xl hover:bg-TextCyan transition-colors duration-200 text-center md:flex-grow flex gap-3 items-center justify-center"
+        >
+        <i class="fa-solid fa-eye"></i>
+        <button>Preview</button></a
+      >
+    </div>
   </div>
 </article>

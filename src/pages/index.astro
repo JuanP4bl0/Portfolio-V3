@@ -3,15 +3,20 @@ import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
 import Card from "../components/Card.astro";
 import Projects from "../components/Projects.astro";
----
+import Tailwind from "../components/ICONS/Tailwind.astro";
+import CSS from "../components/ICONS/CSS.astro";
+import Javascript from "../components/ICONS/Javascript.astro";
+import HTML from "../components/ICONS/HTML.astro";
+import AstroIcon from "../components/ICONS/AstroIcon.astro";
+import SASS from "../components/ICONS/SASS.astro";
 
-<script>
-  const socialMedias = {
-    Gmail: "juanp4blog@gmail.com",
-    LinkedIn: "linkedin.com/JuanP4bl0",
-    Github: "github.com/JuanP4blo",
-  };
-</script>
+const socialMedias = {
+  Gmail: "juanp4blog@gmail.com",
+  LinkedIn: "linkedin.com/JuanP4bl0",
+  Github: "github.com/JuanP4blo",
+  Twitter: "https://twitter.com/JuanP4bl0G",
+};
+---
 
 <Layout title="JuanP4bl0 Portfolio.">
   <Container>
@@ -44,37 +49,52 @@ import Projects from "../components/Projects.astro";
     </section>
     <div class="grid grid-cols-1 lg:grid lg:grid-cols-1">
       <Projects
-        src="/IMGS/Projects/Dela.png"
+        src="/IMGS/Projects/Dela.webp"
         alt="Preview of a first project"
         title="Dela Flowers"
         body="Es más que una simple página web, es un espacio donde la pasión por el crochet se transforma en arte en miniatura. Te invitamos a descubrir un universo tejido con amor, donde cada Amigurumi cobra vida con dedicación y cuidado"
         code="https://github.com/JuanP4bl0/Dela-Flowers"
         preview="https://dela-flowers.vercel.app/"
-      />
+      >
+        <AstroIcon />
+        <SASS />
+      </Projects>
+
       <Projects
-        src="/IMGS/Projects/Spooky.png"
+        src="/IMGS/Projects/Spooky.webp"
         alt="Preview of a second project"
         title="Spooky Fest"
         body="La plataforma que te guiará por un Halloween sin igual. Explora una amplia gama de eventos, desde fiestas temáticas hasta casas embrujadas, filtra por categoría y ubicación para encontrar experiencias a tu medida. Obtén toda la información: fechas, precios, requisitos y detalles para una planificación perfecta."
         code="https://github.com/JuanP4bl0/Halloween-Festival"
         preview="https://spookyfest.vercel.app/"
-      />
+      >
+        <AstroIcon />
+        <SASS />
+      </Projects>
+
       <Projects
-        src="/IMGS/Projects/Hexa.png"
+        src="/IMGS/Projects/Hexa.webp"
         alt="Preview of a third project"
         title="Hexadecimal Color"
         body=" la plataforma que te permite convertir tu visión en color. Elige un color de la forma más intuitiva: desliza tu dedo por la paleta interactiva, y te dara el codigo hexadecimal , ideal para diseñadores, artistas, desarrolladores web y amantes de los colores."
         code="https://github.com/JuanP4bl0/Dela-Flowers"
         preview="https://dela-flowers.vercel.app/"
-      />
+      >
+        <HTML />
+        <CSS />
+      </Projects>
+
       <Projects
-        src="/IMGS/Projects/Hexa.png"
-        alt="Preview of a third project"
-        title="Hexadecimal Color"
-        body=" la plataforma que te permite convertir tu visión en color. Elige un color de la forma más intuitiva: desliza tu dedo por la paleta interactiva, y te dara el codigo hexadecimal , ideal para diseñadores, artistas, desarrolladores web y amantes de los colores."
-        code="https://github.com/JuanP4bl0/Dela-Flowers"
-        preview="https://dela-flowers.vercel.app/"
-      />
+        src="/IMGS/Projects/Portfolio.webp"
+        alt="Preview of four project"
+        title="Portfolio"
+        body="Adéntrate en una selección de mis proyectos más relevantes. Abarcando una amplia gama de sectores, mi portfolio te ofrece una visión integral de mi experiencia y capacidad para brindar soluciones de alta calidad."
+        code="https://github.com/JuanP4bl0/Portfolio-V3"
+        preview="https://portfoliojp.vercel.app/"
+      >
+        <AstroIcon />
+        <Tailwind />
+      </Projects>
     </div>
 
     <section id="About-me" class="flex gap-4 align-middle items-center">
@@ -139,19 +159,19 @@ import Projects from "../components/Projects.astro";
       <div class="flex flex-col">
         <a
           class="hover:text-TextCyan transition-colors duration-200 mb-3 dark:text-white"
-          href="mailto:juanp4blog@gmail.com">juanp4blog@gmail.com</a
+          href=`${socialMedias.Gmail}`>juanp4blog@gmail.com</a
         >
         <a
           class="hover:text-TextCyan transition-colors duration-200 mb-3 dark:text-white"
-          href="https://twitter.com/JuanP4bl0G">JuanSinFiltroo</a
+          href=`${socialMedias.Twitter}`>JuanSinFiltroo</a
         >
         <a
           class="hover:text-TextCyan transition-colors duration-200 mb-3 dark:text-white"
-          href="https://github.com/JuanP4bl0">@JuanP4blo</a
+          href=`${socialMedias.Github}`>@JuanP4blo</a
         >
         <a
           class="hover:text-TextCyan transition-colors duration-200 mb-3 dark:text-white"
-          href="https://www.linkedin.com/in/JuanP4bl0/">in/JuanP4bl0</a
+          href=`${socialMedias.LinkedIn}`>in/JuanP4blo</a
         >
       </div>
     </div>
