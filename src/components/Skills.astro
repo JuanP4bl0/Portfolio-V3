@@ -1,0 +1,102 @@
+---
+
+---
+
+<script>
+  const $SSkillsBTN = document.getElementById("SSkillsBTN");
+  const $HSkillsBTN = document.getElementById("HSkillsBTN");
+  const $SoftSkills = document.getElementById("softSkills");
+  const $HardSkills = document.getElementById("hardSkills");
+
+  function toggleSkillsSection(showSection, hideSection) {
+    showSection.classList.remove("hidden");
+    hideSection.classList.add("hidden");
+  }
+
+  $SSkillsBTN.addEventListener("click", () => {
+    toggleSkillsSection($SoftSkills, $HardSkills);
+    $SSkillsBTN.classList.add("dark:bg-TextCyan");
+    $SSkillsBTN.classList.add("text-white");
+
+    $HSkillsBTN.classList.remove("dark:bg-TextCyan");
+    $HSkillsBTN.classList.add("bg-white");
+    $HSkillsBTN.classList.remove("text-white");
+    $HSkillsBTN.classList.add("text-black");
+  });
+
+  $HSkillsBTN.addEventListener("click", () => {
+    toggleSkillsSection($HardSkills, $SoftSkills);
+    $HSkillsBTN.classList.remove("dark:bg-white");
+    $HSkillsBTN.classList.add("dark:bg-TextCyan");
+
+    $SSkillsBTN.classList.remove("dark:bg-TextCyan");
+    $SSkillsBTN.classList.add("bg-white");
+    $SSkillsBTN.classList.remove("text-white");
+    $SSkillsBTN.classList.add("text-black");
+
+    $HSkillsBTN.classList.add("text-white");
+  });
+</script>
+<div class="flex flex-col justify-center align-middle items-center">
+  <div class="m-auto md:m-0 mb-4 gap-3 md:w-max flex md:mb-5">
+    <button
+      class="dark:bg-TextCyan hover:text-white text-white p-2 rounded-2xl text-xl hover:bg-TextCyan transition-all duration-300"
+      id="SSkillsBTN">Soft Skills</button
+    >
+    <button
+      class="dark:bg-white p-2 rounded-2xl text-xl hover:bg-TextCyan hover:text-white transition-all duration-300"
+      id="HSkillsBTN">Hard Skills</button
+    >
+  </div>
+  <section id="softSkills" class="w-[70%]">
+    <div
+      class="dark:bg-white text-black text-center flex items-center justify-center rounded-xl p-4 mb-4 flex-wrap"
+    >
+      <h4>Trabajo en equipo e individual</h4>
+    </div>
+
+    <div
+      class="dark:bg-white text-black text-center flex items-center justify-center rounded-xl p-4 mb-4"
+    >
+      <h4>Paciencia</h4>
+    </div>
+
+    <div
+      class="dark:bg-white text-black text-center flex items-center justify-center rounded-xl p-4 mb-4"
+    >
+      <h4>Comunicacion</h4>
+    </div>
+
+    <div
+      class="dark:bg-white text-black text-center flex items-center justify-center rounded-xl p-4 mb-4"
+    >
+      <h4>Facil adaptacion</h4>
+    </div>
+
+    <div
+      class="dark:bg-white text-black text-center flex items-center justify-center rounded-xl p-4 mb-4"
+    >
+      <h4>Organizacion</h4>
+    </div>
+  </section>
+
+  <section id="hardSkills" class="hidden w-[70%]">
+    <div
+      class="dark:bg-white text-black text-center flex items-center justify-center rounded-xl p-4 mb-4"
+    >
+      <h4>Programacion web</h4>
+    </div>
+
+    <div
+      class="dark:bg-white text-black text-center flex items-center justify-center rounded-xl p-4 mb-4"
+    >
+      <h4>UI Design</h4>
+    </div>
+
+    <div
+      class="dark:bg-white text-black text-center flex items-center justify-center rounded-xl p-4 mb-4"
+    >
+      <h4>Codificacion</h4>
+    </div>
+  </section>
+</div>
